@@ -1,0 +1,5 @@
+select product_id, sum(if(store='store1',price,NULL)) store1,
+sum(if(store='store2',price,NULL)) store2,
+sum(if(store='store3',price,NULL)) store3
+from Products 
+Group by product_id
